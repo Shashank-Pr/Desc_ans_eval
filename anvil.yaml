@@ -1,0 +1,111 @@
+correct_dependency_ids: {}
+dependencies: []
+exported_table_schema:
+- python_name: feedback
+  client: none
+  server: full
+  name: Feedback
+  columns:
+    VY7mtOfb3jI=:
+      name: feedback
+      type: string
+      admin_ui: {order: 2, width: 200}
+    YfTBViUolfg=:
+      name: email
+      type: string
+      admin_ui: {order: 1, width: 200}
+    YtEpA5goVPg=:
+      name: created
+      type: datetime
+      admin_ui: {order: 3, width: 200}
+    reNetCrJvjA=:
+      name: name
+      type: string
+      admin_ui: {order: 0, width: 200}
+  id: 537593
+- python_name: table_2
+  client: full
+  server: full
+  name: Table 2
+  columns:
+    1J7ylw+lBCk=:
+      name: Description
+      type: string
+      admin_ui: {order: 0, width: 200}
+    WeLGAPRgvyY=:
+      name: Done
+      type: bool
+      admin_ui: {order: 1, width: 200}
+  id: 538914
+- python_name: table_3
+  client: full
+  server: full
+  name: Table 3
+  columns:
+    R0Ph_YlYU_E=:
+      name: Questions
+      type: string
+      admin_ui: {order: 0, width: 200}
+    U65wyPRhHoI=:
+      name: Answer
+      type: string
+      admin_ui: {order: 1, width: 200}
+  id: 539202
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/email.yml
+  client_config: {}
+  server_config: {}
+cta: {preset: feedback_form_welcome}
+startup: {type: form, module: Form1}
+package_name: Feedback_Form_1_1
+allow_embedding: false
+name: Feedback Form 1 1
+runtime_options: {version: 2, server_version: python3-sandbox, client_version: '3',
+  server_spec: null}
+metadata: {}
+startup_form: null
+db_schema:
+  feedback:
+    title: Feedback
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: feedback
+      admin_ui: {width: 200}
+      type: string
+    - name: created
+      admin_ui: {width: 200}
+      type: datetime
+  table_2:
+    title: Table 2
+    client: full
+    server: full
+    columns:
+    - name: Description
+      admin_ui: {width: 200}
+      type: string
+    - name: Done
+      admin_ui: {width: 200}
+      type: bool
+  table_3:
+    title: Table 3
+    client: full
+    server: full
+    columns:
+    - name: Questions
+      admin_ui: {width: 200}
+      type: string
+    - name: Answer
+      admin_ui: {width: 200}
+      type: string
+uplink_visible: true
+renamed: true
