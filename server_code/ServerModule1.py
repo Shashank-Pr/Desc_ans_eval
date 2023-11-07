@@ -32,6 +32,7 @@ def Compute_Result():
   {
    'Question': r['Questions'],
    'Ans': r['Answer'],
+   'Marks': r['Marks']
   }
   for r in app_tables.table_3.search()
   ]
