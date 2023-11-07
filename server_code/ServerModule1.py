@@ -24,7 +24,7 @@ def qcount(file):
   x=len(obj)
   for i in range (1,x+1):
     Number=str(i)
-    app_tables.table_3.add_row(Questions=obj[Number]['Question'])
+    app_tables.table_3.add_row(Questions=obj[Number]['Question'],Marks=obj[Number]['Marks'])
   return qcnt
 @anvil.server.callable
 def Compute_Result():
