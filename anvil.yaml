@@ -108,7 +108,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: Marks
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {width: 200}
       type: string
 uplink_visible: true
 renamed: true
