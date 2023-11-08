@@ -38,3 +38,5 @@ def Compute_Result():
   ]
   result=anvil.server.call('Result',info)
   return result
+
+  

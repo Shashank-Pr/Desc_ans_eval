@@ -85,17 +85,6 @@ db_schema:
     - name: created
       admin_ui: {width: 200}
       type: datetime
-  table_2:
-    title: Table 2
-    client: full
-    server: full
-    columns:
-    - name: Description
-      admin_ui: {width: 200}
-      type: string
-    - name: Done
-      admin_ui: {width: 200}
-      type: bool
   table_3:
     title: Table 3
     client: full
@@ -110,5 +99,19 @@ db_schema:
     - name: Marks
       admin_ui: {width: 200}
       type: string
+  results:
+    client: full
+    server: full
+    columns:
+    - name: Name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Roll no
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Marks
+      admin_ui: {width: 200, order: 2}
+      type: number
+    title: Result
 uplink_visible: true
 renamed: true

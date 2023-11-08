@@ -21,9 +21,40 @@ class Form1(Form1Template):
     alert("Question Paper Uploaded Successfully....")
     self.repeating_panel_1.items=app_tables.table_3.search()
     self.text_box_3.visible=True
+    self.test_done.visible=True
+    self.inst_panel.visible=True
 
-  def button_2_click(self, **event_args):
+  def test_done_click(self, **event_args):
     """This method is called when the button is clicked"""
     
     result=anvil.server.call('Compute_Result')
-    self.text_box_1.text=result
+    self.result_box.visible=True
+    self.result_box.text=result
+    alert(f"Your result is {result} Marks.")
+
+  
+
+  def cred_done_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if(self.name_std.text==""):
+      alert("Mention Your Name!")
+    elif(self.roll_no.text==""):
+      alert("Mention Your Roll no!")
+    else:
+      alert(f"{self.name_std.text},Roll no : {self.roll_no.text}, Upload your provided Question Paper...")
+      self.label_2.visible=True
+      self.file_loader_1.visible=True
+
+  def exit_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    app_tables.table_3.delete_all_rows()
+    name=self.name_std.text
+    rn=self.roll_no.text
+    Mark=self.result_box.text
+    app_tables.results.add_row(Name=name,Marks=Mark,Roll no=rn)
+
+  
+   
+    
+    
+    
