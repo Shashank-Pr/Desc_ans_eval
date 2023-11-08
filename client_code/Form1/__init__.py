@@ -51,7 +51,7 @@ class Form1(Form1Template):
     name=self.name_std.text
     rn=self.roll_no.text
     Mark=self.result_box.text
-    app_tables.results.add_row(Name=name,Marks=Mark,Roll no=rn)
+    app_tables.results.add_row(Name=name,Marks=Mark)
 
   
    
