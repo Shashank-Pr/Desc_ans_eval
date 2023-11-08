@@ -106,12 +106,12 @@ db_schema:
     - name: Name
       admin_ui: {width: 200, order: 0}
       type: string
-    - name: Roll no
-      admin_ui: {width: 200, order: 1}
+    - name: Roll_no
+      admin_ui: {order: 1, width: 200}
       type: string
     - name: Marks
       admin_ui: {width: 200, order: 2}
-      type: number
+      type: string
     title: Result
 uplink_visible: true
 renamed: true

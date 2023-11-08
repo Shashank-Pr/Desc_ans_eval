@@ -50,8 +50,9 @@ class Form1(Form1Template):
     app_tables.table_3.delete_all_rows()
     name=self.name_std.text
     rn=self.roll_no.text
-    Mark=self.result_box.text
-    app_tables.results.add_row(Name=name,Marks=Mark)
+    Mark=(self.result_box.text)
+    app_tables.results.add_row(Name=name,Marks=Mark,Roll_no=rn)
+    open_form('Form2')
 
   
    
