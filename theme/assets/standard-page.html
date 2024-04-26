@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" rel="preload" as="font" crossorigin="anonymous">
 
 <div class="structure">
   <div class="app-bar" anvil-drop-container=".anvil-container" anvil-drop-redirect=".placeholder">
@@ -35,7 +35,8 @@
     var ln = $('.structure > .nav-holder > .left-nav');
     ln.animate({left: -ln.outerWidth()}, function() {
       ln.removeClass("in-transition shown").addClass("hidden");
-    $('.nav-shield').removeClass("shown");
+      $('.nav-shield').removeClass("shown");
+      $(window).trigger('resize');
     });
   }
   function showSidebar() {
@@ -44,6 +45,7 @@
     ln.addClass("shown").removeClass("hidden").css({left: "-100%"}).css({left: -ln.outerWidth()}).animate({left: 0}, function() {
       ln.removeClass("in-transition");
     });
+    $(window).trigger('resize');
   }
   $('.sidebar-toggle, .nav-shield').off('click').on('click', function() {
     var ln = $('.structure > .nav-holder > .left-nav');
