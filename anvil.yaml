@@ -60,9 +60,9 @@ services:
   server_config: {}
 cta: {preset: feedback_form_welcome}
 startup: {type: form, module: Form1}
-package_name: Feedback_Form_1_1
+package_name: DESCR_Ansval_proj
 allow_embedding: false
-name: Feedback Form 1 1
+name: DESCR_Ansval_proj
 runtime_options: {version: 2, server_version: python3-sandbox, client_version: '3',
   server_spec: null}
 metadata: {}
