@@ -54,6 +54,10 @@ class Form1(Form1Template):
     app_tables.results.add_row(Name=name,Marks=Mark,Roll_no=rn)
     open_form('Form2')
 
+  def name_std_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
   
    
     
